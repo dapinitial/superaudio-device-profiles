@@ -8,9 +8,9 @@ This is the substrate for SuperAudio's M6.5 Claude Skill — an AI-assisted onbo
 
 ---
 
-## Status — 2026-05-18
+## Status — 2026-06-29
 
-**v1 schema · 4 seed profiles · pre-launch.** This repo lives inside the SuperAudio monorepo for now; it'll split out as a standalone public repo (`github.com/dapinitial/superaudio-device-profiles`) when SuperAudio M5.5 ships.
+**v1 schema · 4 seed profiles · live.** Standalone public repo, split out of the SuperAudio monorepo at M5.5 go-live. SuperAudio consumes it as a pinned git submodule. Every contributed profile is validated against [`schema.json`](./schema.json) by CI ([`scripts/validate.py`](./scripts/validate.py), run by the `Validate profiles` GitHub Action) before review.
 
 | Profile | Status | Source |
 |---|---|---|
@@ -62,7 +62,7 @@ Three reasons SuperAudio splits this out:
 2. **PR velocity.** Profile contributions don't need to wait on app releases. A community fix lands in hours, not weeks.
 3. **Schema as a coordination point.** Other consumers can adopt the schema; we'd be the largest user but not the only one. Tailscale-style: open substrate, paid UX.
 
-For now, the directory lives inside the SuperAudio monorepo so the substrate ships in lockstep with the app's loader. Split happens at M5.5 ship.
+Split out at M5.5 go-live (2026-06-29). SuperAudio now consumes this repo as a pinned git submodule, so the substrate still ships in lockstep with the app's loader (the app bundles the pinned commit) while contributions land here independently of app releases.
 
 ---
 
